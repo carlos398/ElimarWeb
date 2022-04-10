@@ -1,0 +1,112 @@
+.AboutContainer {
+    width: 90%;
+    height: 90vh;
+    min-height: 800px;
+    margin: 0px auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.ImgContainer {
+    width: 90%;
+    max-width: 400px;
+    min-width: 280px;
+    height: 400px;
+    margin: 0px auto;
+    order: 1;
+}
+
+.AboutContainer .AboutImg {
+    width: 100%;
+    height: 100%;
+    background-image: url('../../../../src/images/ElianaAbout.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: gray;
+    border-radius: 20px;
+    position: relative;
+    transition: .5s;
+}
+
+.AboutContainer .AboutImg  img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    position: absolute;
+    transform: rotate(3deg);
+    left: 10px;
+    top: -1px;
+    transition: .5s;
+}
+
+.AboutContainer .AboutImg:hover img{
+    transition: .5s;
+    transform: translateX(-100%);
+}
+
+.AboutContainer .AboutImg img:hover img{
+    transition: .5s;
+    transform: translateX(-100%);
+}
+
+.AboutContainer .AboutText {
+    order: 2;
+    width: 90%;
+    max-width: 700px;
+    min-width: 280px;
+    height: 90%;
+    max-height: 350px;
+    min-height: 300px;
+    background-color: #3d3d3d;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 1px 1px 10px pink;
+    transition: .5s;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.AboutContainer .AboutText h2{
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.AboutContainer .AboutText p {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 900px) {
+    .AboutContainer {
+        display: grid;
+        grid-template-rows:1fr 1fr;
+        gap: 10px;
+        margin: 0 auto;
+    }
+
+    .ImgContainer {
+        transition: .7s;
+        order: 2;
+        width: 270px;
+        height: 300px;
+        margin-top: 20px;
+        margin-bottom: 0px;
+    }
+
+    .AboutContainer .AboutText{
+        transition: .7s;
+        order: 1;
+        margin-top: 0px;
+    }
+}

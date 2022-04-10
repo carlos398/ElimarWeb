@@ -1,0 +1,51 @@
+.NavContainer {
+    width: 100%;
+    position:  fixed ;
+    bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.NavContainer ul {
+    width: 90%;
+    min-width: 300px;
+    max-width: 500px;
+    height: 40px;
+    list-style: none;
+    background-color: rgba(207, 227, 245, 0.247);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.NavContainer ul li{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.NavContainer ul li:hover{
+    background-color: rgba(245, 140, 172, 0.911);
+    transform: scale(1.3);
+}
+
+.NavContainer ul li a {
+    font-size: 1.6em;
+    font-weight: bold;
+    padding: 0px auto;
+    text-decoration: none;
+    text-align: center;
+    color: rgba(15, 15, 15, 0.699);
+    border: none;
+    padding: 5px;
+}
+
