@@ -23,7 +23,7 @@ const Navbar = () => {
                     </li>
                     <li>
                         <a href="https://www.youtube.com/watch?v=81AShKbT_TY">
-                            <i class="fa-solid fa-mobile"></i>
+                            <i className="fa-solid fa-mobile"></i>
                         </a>
                     </li>
                 </ul>
