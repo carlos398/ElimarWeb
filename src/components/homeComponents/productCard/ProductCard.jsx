@@ -1,23 +1,23 @@
 import React from 'react'
-import ElianaAbout from "../../../images/ElianaAbout.jpg"
 
 import "./ProductCard.css"
 
-const ProductCard = (porps) => {
+
+const ProductCard = (props) => {
   return (
-    <div className='ProductCard'>
+    <div className='ProductCard' key={props.product.id}>
         <div className='ProductCard__image'>
-            <img src={ElianaAbout} alt="" />
+            <img src={require(`./../../../images/${props.product.title}.jpeg`)} alt="" />
         </div>
 
         <div className='ProductCard__info'>
 
             <div className='ProductCard__info__title'>
-                <h3>Product Name</h3>
+                <h3>{props.product.title}</h3>
             </div>
 
             <div className='ProductCard__info__description'>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisi eu aliquam consectetur, nisl nisi euismod purus, eget egestas nisl nisi euismod purus.</p>
+                <p>{props.title}</p>
             </div>
 
         </div>

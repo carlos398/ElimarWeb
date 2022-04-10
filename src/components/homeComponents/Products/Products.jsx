@@ -1,26 +1,26 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import ProductCard from '../productCard/ProductCard'
 
 import "./Products.css"
 
 const Products = () => {
 
+  const [productsData, setProductsData] = React.useState([])
+
+  useEffect(() => {
+    data()
+   }, [])
+
   const data = async () => { 
     const data = await fetch("./data.json");
     const dataJson = await data.json();
-
-    console.log(dataJson)
-    return dataJson;
+    setProductsData(dataJson)
   }
-
-  data()
 
   return (
     <div className='ProductsContainer'>
         <div className='ProductsCardsContainer'>
-            <ProductCard/>
-            <ProductCard/>
-            <ProductCard/>
+          {productsData.map((product) => {return <ProductCard product={product} /> })}
         </div>
     </div>
   )
